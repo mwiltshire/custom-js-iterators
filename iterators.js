@@ -16,6 +16,8 @@ const iterateFlat = (arr) => {
   return newArr;
 };
 
+console.log([...iterateFlat(array)]); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 for (const i of iterateFlat(array)) {
   console.log(i); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 }
