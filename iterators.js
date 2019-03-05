@@ -46,7 +46,7 @@ const iterateNthElement = (arr, n) => {
   newArr[Symbol.iterator] = function* it() {
     let index = 0;
     while (index !== this.length) {
-      if (index % n === 0) yield this[index];
+      if ((index + 1) % n === 0) yield this[index];
       index += 1;
     }
   };
@@ -54,7 +54,7 @@ const iterateNthElement = (arr, n) => {
 };
 
 for (const i of iterateNthElement(array2, 2)) {
-  console.log(i); // 1, 4, 5, 7, 9, 11, 13, 15
+  console.log(i); // 2, 4, 6, 8, 10, 12, 14, 16
 }
 
 // Iterate over array and call every element of type function
